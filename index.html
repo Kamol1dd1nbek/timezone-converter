@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Time Zone Converter</title>
+        <meta name="title" content="Timezone Converter - Convert Time Zones Easily | ZamonKo‘prigi">
+        <meta name="description" content="Use our free Timezone Converter to easily convert between different time zones. Find accurate time differences and get the local time for cities around the world.">
+        <meta name="keywords" content="timezone converter, time zone difference, world time, current time, time zone conversion tool">
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Timezone Converter - Convert Time Zones Easily">
+        <meta property="og:description" content="Find the exact time difference and convert time zones for any location worldwide with our simple and free tool.">
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <h1 class="header__title">Zamon Ko‘prigi</h1>
+                <p class="header__description">Convert times between any time zones around the world</p>
+                <div class="converter">
+                    <div class="converter__tabs">
+                        <button class="converter__tab converter__tab--active">Converter</button>
+                        <button class="converter__tab">World Map</button>
+                    </div>
+                    <div class="converter__inputs-wrapper">
+                        <div class="converter__inputs-container">
+                            <div class="converter__date-time-input">
+                                <div class="converter__date-time-label">
+                                    <label class="label" for="datetime">Date & Time</label>
+                                    <button class="button" id="getCurrentTime">
+                                        <i class='bx bx-time-five' style='color:#000; font-size: 18px;' ></i>
+                                        Current Time
+                                    </button>
+                                </div>
+                                <input id="datetime" value="1991-08-31T18:00:00.000" class="input box" type="datetime-local">
+                            </div>
+                            <div class="converter__timezones">
+                                <div class="converter__timezones-select">
+                                    <label for="fromTimezoneSelect" class="label">
+                                        From Time Zone
+                                    </label>
+                                    <select id="fromTimezoneSelect" class="select box" name="fromTimezone"></select>
+                                </div>
+                                <div class="converter__timezones-select">
+                                    <label for="toTimezoneSelect" class="label">
+                                        To Time Zone
+                                    </label>
+                                    <select id="toTimezoneSelect" value="Asia/Tashkent" class="select box" name="toTimezone"></select>
+                                </div>
+                                <button id="swapTimezones" class="button">
+                                    <i class='bx bx-transfer' style='color:#000; font-size: 18px;'></i>
+                                    Swipe Time Zones
+                                </button>
+                            </div>
+                            <button id="convertBtn" class="box">Convert Time</button>
+                            <div class="result" id="conversionResult">
+                                <div class="result__header">
+                                    <p>Converted Time</p>
+                                    <div id="copyBtn" class="result__header__copy">
+                                        <i class='bx bx-copy'></i>
+                                    </div>
+                                </div>
+                                <output id="resultText"></output>
+                            </div>
+                            <div id="toast" style="
+                                visibility: hidden;
+                                min-width: 120px;
+                                margin-left: -60px;
+                                background-color: #4CAF50;
+                                color: white;
+                                text-align: center;
+                                border-radius: 4px;
+                                padding: 10px;
+                                position: fixed;
+                                z-index: 1;
+                                left: 50%;
+                                bottom: 30px;
+                                font-size: 16px;
+                                transition: visibility 0s, opacity 0.5s linear;
+                                opacity: 0;
+                            "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./js/main.js" defer></script>
+    </body>
+</html>
